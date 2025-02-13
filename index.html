@@ -5,37 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobhan Yesapogu - Digital Resume</title>
     <style>
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            background: url('pexels-pixabay-531880.jpg') no-repeat center center fixed;
+            background-size: cover;
             margin: 0;
             padding: 0;
+            color: white;
         }
+
+        /* Header */
         header {
             text-align: center;
             padding: 20px;
-            background: #4CAF50;
-            color: white;
+            background: rgba(0, 0, 0, 0.7);
         }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #4CAF50;
+        }
+        header p {
+            font-size: 1.2em;
+            color: #ddd;
+        }
+
+        /* Sections */
         section {
             padding: 20px;
-            margin: 10px;
-            background: white;
-            border-radius: 5px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            width: 80%;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
         h2 {
-            color: #333;
+            color: #4CAF50;
         }
+
+        /* Lists */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 5px 0;
+        }
+
+        /* Links */
         a {
-            color: #007BFF;
+            color: #ffcc00;
             text-decoration: none;
         }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Form */
+        form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        input::placeholder, textarea::placeholder {
+            color: #ddd;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+
+        /* Footer */
         footer {
             text-align: center;
             padding: 10px;
-            background: #4CAF50;
-            color: white;
+            background: rgba(0, 0, 0, 0.7);
         }
     </style>
 </head>
@@ -59,53 +126,55 @@
     <section>
         <h2>Skills</h2>
         <ul>
-            <li>HTML & CSS</li>
-            <li>JavaScript (Basic)</li>
-            <li>C and Data Structures with C</li>
-            <li>C++ with OOPs</li>
-            <li>Python (Basics)</li>
+            <li> HTML & CSS</li>
+            <li> JavaScript (Basic)</li>
+            <li> C and Data Structures with C</li>
+            <li> C++ with OOPs</li>
+            <li> Python (Basics)</li>
         </ul>
     </section>
 
     <section>
         <h2>Projects</h2>
         <ul>
-            <li><strong>QR-Based Canteen Queue</strong> - A project to simplify food ordering using QR scanning.</li>
-            <li><strong>Portfolio Website</strong> - A personal website showcasing my work.</li>
+            <li><strong> QR-Based Canteen Queue</strong> - A project to simplify food ordering using QR scanning.</li>
+            <li><strong> Portfolio Website</strong> - A personal website showcasing my work.</li>
         </ul>
     </section>
 
     <section>
-        <h1>Contact me</menu></h1>
-        <p>Feel free to get in touch with me using the form below:</p>
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out using the form below:</p>
         <form>
-            <label for=""name>Name:</label>
-            <input type="text">
-            <br>
-            <label for="Email">Email:</label>
-            <input type="email">
-            <br>
-            <b>Choose your gender:</b>
-            <input type="radio" id="male" value="male">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email">
+
+            <label>Choose your gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
             <label for="male">Male</label>
-            <input type="radio" id="female" value="female">
+            <input type="radio" id="female" name="gender" value="female">
             <label for="female">Female</label>
-            <br>
+
             <p>Select your interests:</p>
-            <input type="checkbox" id="coding" value="coding">
+            <input type="checkbox" id="coding" name="interest" value="coding">
             <label for="coding">Coding</label>
-            <input type="Checkbox" id="reading" value="reading">
+            <input type="checkbox" id="reading" name="interest" value="reading">
             <label for="reading">Reading</label>
-            <br>
-            <label for="bio">Bio(upto 200 characters)</label>
-            <input type="text">
-            <br>
-            <button type="submit"></button>
+
+            <label for="bio">Bio (up to 200 characters):</label>
+            <textarea id="bio" rows="3" placeholder="Tell something about yourself..."></textarea>
+
+            <button type="submit">Submit</button>
         </form>
+    </section>
+
+    <section>
         <h2>Contact</h2>
         <p>Email: <a href="mailto:sobhanyesapogu@gmail.com">sobhanyesapogu@gmail.com</a></p>
         <p>GitHub: <a href="https://github.com/sobhanyesapogu" target="_blank">github.com/sobhanyesapogu</a></p>
-        
     </section>
 
     <footer>
